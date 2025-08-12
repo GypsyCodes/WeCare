@@ -1,0 +1,336 @@
+/* MapWidget.css - Estilos para o widget de mapa */
+
+.map-widget {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-widget .card-header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+  color: white;
+  border-bottom: none;
+  padding: 1rem 1.25rem;
+}
+
+.map-widget .card-body {
+  padding: 1.5rem;
+}
+
+/* Coordenadas info */
+.coordinates-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  padding: 1rem;
+  border-left: 4px solid #198754;
+}
+
+.coordinate-value {
+  background: #fff;
+  color: #0d6efd;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 2px;
+  border: 1px solid #dee2e6;
+}
+
+/* Informações do raio */
+.radius-info {
+  background: linear-gradient(135deg, #e7f3ff 0%, #cce7ff 100%) !important;
+  border: 1px solid #0d6efd;
+}
+
+.radius-info .fw-bold {
+  font-size: 1.1rem;
+}
+
+/* Container do mapa */
+.map-container {
+  margin-top: 1rem;
+}
+
+.map-header {
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.map-iframe-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #e9ecef;
+}
+
+.map-iframe-container iframe {
+  display: block;
+  border-radius: 10px;
+}
+
+/* Overlay do círculo do raio */
+.radius-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.radius-circle {
+  border: 3px solid #dc3545;
+  border-radius: 50%;
+  background: rgba(220, 53, 69, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-radius 2s infinite;
+  position: relative;
+}
+
+.radius-label {
+  background: #dc3545;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+@keyframes pulse-radius {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+/* Input de busca */
+.map-widget .input-group {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #dee2e6;
+  transition: border-color 0.2s ease;
+}
+
+.map-widget .input-group:focus-within {
+  border-color: #0d6efd;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.2);
+}
+
+.map-widget .input-group .form-control {
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.map-widget .input-group .btn {
+  border: none;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+}
+
+.map-widget .input-group .btn:hover {
+  background: linear-gradient(135deg, #0b5ed7 0%, #0a58ca 100%);
+}
+
+/* Badges */
+.map-widget .badge {
+  font-size: 0.75rem;
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+}
+
+.map-widget .badge.bg-success {
+  background: linear-gradient(135deg, #198754 0%, #146c43 100%) !important;
+}
+
+/* Alertas */
+.map-widget .alert {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.map-widget .alert-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  color: #664d03;
+  border-left: 4px solid #ffc107;
+}
+
+.map-widget .alert-info {
+  background: linear-gradient(135deg, #d1ecf1 0%, #b8daff 100%);
+  color: #055160;
+  border-left: 4px solid #0dcaf0;
+}
+
+.map-widget .alert ul {
+  margin-bottom: 0;
+}
+
+.map-widget .alert li {
+  margin-bottom: 0.25rem;
+}
+
+/* Botões de ação */
+.map-widget .btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+  transition: all 0.2s ease;
+}
+
+.map-widget .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+.map-widget .btn-outline-success {
+  color: #198754;
+  border-color: #198754;
+  transition: all 0.2s ease;
+}
+
+.map-widget .btn-outline-success:hover {
+  background-color: #198754;
+  border-color: #198754;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(25, 135, 84, 0.3);
+}
+
+/* Loading states */
+.map-widget .spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .map-widget .card-body {
+    padding: 1rem;
+  }
+  
+  .coordinates-info .row > div {
+    margin-bottom: 0.5rem;
+  }
+  
+  .radius-info .row > div {
+    margin-bottom: 0.25rem;
+  }
+  
+  .coordinate-value {
+    font-size: 0.8rem;
+  }
+  
+  .map-iframe-container iframe {
+    height: 250px;
+  }
+  
+  .radius-circle {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  .radius-label {
+    font-size: 0.65rem;
+    padding: 1px 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-widget .card-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .map-widget .card-header .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+  
+  .map-iframe-container iframe {
+    height: 200px;
+  }
+  
+  .coordinates-info {
+    padding: 0.75rem;
+  }
+  
+  .radius-info {
+    font-size: 0.85rem;
+  }
+}
+
+/* Estados de foco */
+.map-widget .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+/* Animações */
+.coordinates-info {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.map-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Melhorias para acessibilidade */
+.map-widget button:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+.map-widget .form-control:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Estilo para modo escuro (se implementado) */
+@media (prefers-color-scheme: dark) {
+  .map-widget {
+    background-color: #212529;
+    color: #fff;
+  }
+  
+  .coordinates-info {
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+    border-left-color: #20c997;
+  }
+  
+  .coordinate-value {
+    background: #495057;
+    color: #74c0fc;
+    border-color: #6c757d;
+  }
+  
+  .map-iframe-container {
+    border-color: #495057;
+  }
+} 

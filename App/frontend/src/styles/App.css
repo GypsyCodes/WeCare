@@ -1,0 +1,134 @@
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(135deg, #429E17 0%, #2D6E0A 100%);
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.App-link {
+  color: #429E17;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom scrollbar with We Care colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #429E17;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D6E0A;
+}
+
+/* Toast customizations with We Care colors */
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast--success {
+  background-color: #429E17;
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545;
+}
+
+.Toastify__toast--info {
+  background-color: #0dcaf0;
+}
+
+.Toastify__toast--warning {
+  background-color: #fd7e14;
+}
+
+/* Loading states */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.spinner-border {
+  color: #429E17;
+}
+
+/* Cards with We Care styling */
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(66, 158, 23, 0.075);
+  border: 1px solid rgba(66, 158, 23, 0.125);
+}
+
+.card-header {
+  background-color: rgba(66, 158, 23, 0.03);
+  border-bottom: 1px solid rgba(66, 158, 23, 0.125);
+}
+
+/* Tables with We Care styling */
+.table-hover tbody tr:hover {
+  background-color: rgba(66, 158, 23, 0.05);
+}
+
+/* Progress bars */
+.progress-bar {
+  background-color: #429E17;
+}
+
+/* Alerts */
+.alert-primary {
+  background-color: rgba(66, 158, 23, 0.1);
+  border-color: rgba(66, 158, 23, 0.2);
+  color: #2D6E0A;
+}
+
+/* Pagination */
+.page-link {
+  color: #429E17;
+}
+
+.page-link:hover {
+  color: #2D6E0A;
+  background-color: rgba(66, 158, 23, 0.1);
+  border-color: #429E17;
+}
+
+.page-item.active .page-link {
+  background-color: #429E17;
+  border-color: #429E17;
+} 

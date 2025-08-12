@@ -1,0 +1,59 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+pymysql==1.1.0
+aiomysql==0.2.0
+cryptography==41.0.7
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Background Tasks
+celery==5.3.4
+redis==5.0.1
+
+# AI/ML Processing
+opencv-python==4.8.1.78
+pytesseract==0.3.10
+spacy==3.7.2
+Pillow==10.1.0
+PyMuPDF==1.23.8
+
+# Additional OCR dependencies
+opencv-contrib-python==4.8.1.78
+
+# PDF Generation
+reportlab==4.0.7
+
+# Monitoring
+sentry-sdk==1.38.0
+prometheus-client==0.19.0
+
+# HTTP Requests
+httpx==0.25.2
+requests==2.31.0
+
+# Validation
+pydantic==2.5.0
+email-validator==2.1.0
+
+# Environment
+python-decouple==3.8
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+ 
